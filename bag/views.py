@@ -92,9 +92,11 @@ def remove_from_bag(request, item_id):
             messages.success(request, f'Removed size {size.upper()}{product.name} form your bag')
         else:
             bag.pop(item_id)
+            messages.success(request, f'Removed {product.name} from your bag')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
 
     except Exception as e:
+        messages.error(request, f'Error romoving item: {e}')
         return HttpResponse(status=500)
