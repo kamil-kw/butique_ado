@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
+    
+    #Other
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +58,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'butique_ado.urls'
+
+CRISPY_TEMPLATES_PACK = 'bootsrap4'
 
 TEMPLATES = [
     {
