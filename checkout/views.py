@@ -11,6 +11,8 @@ from bag.contexts import bag_contents
 import stripe
 import json
 
+# pylint: disable=missing-function-docstring, invalid-name
+
 @require_POST
 def cache_checkout_data(request):
     try:
