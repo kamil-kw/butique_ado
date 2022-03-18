@@ -13,8 +13,18 @@ class StripeWH_Handler:
             content=f'Unhandeled webhook received: {event["type"]}',
             status=200)
 
+    def jls_extract_def(self):
+        
+        return 
+
     def handle_payment_intent_succeeded(self, event):
         """[Handle the payment_intent.succeeded from Stripe]"""
+        intent = event.data.object
+        pid = intent.id
+        bag = intent.metadata.bag
+        save_info = intent.metadata.save_info
+        
+        billing_details = intent.charges
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
