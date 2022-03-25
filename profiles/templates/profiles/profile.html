@@ -62,6 +62,7 @@
                                                 Size {{ item.product.size|upper }}
                                             {% endif %}{{ item.product.name }} x{{ item.quantity }}
                                         </li>
+                                    {% endfor %}
                                     </ul>
                                 </td>
                                 <td>${{ order.grand_total }}</td>
