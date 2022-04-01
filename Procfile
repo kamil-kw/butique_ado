@@ -1,0 +1,1 @@
+web: gunicorn butique_ado.wsgi:application
