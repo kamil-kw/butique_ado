@@ -190,7 +190,7 @@ if 'USE_AWS' in os.environ:
     
     
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = os.getenv('kam-kw-boutique-ados')
+    AWS_STORAGE_BUCKET_NAME = 'kam-kw-boutique-ados'
     AWS_S3_REGION_NAME = 'eu-central-1'
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
